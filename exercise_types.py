@@ -1,5 +1,5 @@
 import numpy as np
-from body_part_angle import BodyPartAngle
+from body_angle import BodyPartAngle
 from utils import *
 
 

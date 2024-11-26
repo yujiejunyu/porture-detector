@@ -2,8 +2,8 @@ import cv2
 import argparse
 from utils import *
 import mediapipe as mp
-from body_part_angle import BodyPartAngle
-from types_of_exercise import TypeOfExercise
+from body_angle import BodyPartAngle
+from exercise_types import TypeOfExercise
 
 # 创建一个ArgumentParser对象
 ap = argparse.ArgumentParser()
@@ -28,7 +28,7 @@ mp_pose = mp.solutions.pose
 
 # 如果参数中指定了视频源，则打开该视频源
 if args["video_source"] is not None:
-    cap = cv2.VideoCapture("Exercise Videos/" + args["video_source"])
+    cap = cv2.VideoCapture("Exercise_Videos/" + args["video_source"])
 else:
     cap = cv2.VideoCapture(0)  # 否则打开摄像头
 
